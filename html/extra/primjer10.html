@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form name="form1" method="POST" action="test.php">
+        Da li ste musko ili zensko? <br/>
+        <ul type="square">
+            <li> <input type="radio" name="pol" checked> M </li>
+            <li> <input type="radio" name="pol"> Z </li>
+        </ul>
+
+        Sta volite da jedete? <br/>
+        <ol type="a">
+            <li> <input type="checkbox" name="krompir"> Krompir </li>
+            <li> <input type="checkbox" name="paradazj"> Paradajz </li>
+            <li> <input type="checkbox" name="kruska" checked> Kruska </li>
+        </ol>
+
+        <b> Izaberite omiljeni predmet: 
+            <select name="predmeti" multiple> 
+                <option selected> Programiranje </option>
+                <option> Algebra </option>
+                <option> Analiza </option>
+            </select>
+        <br/>
+
+        <textarea rows="5" cols="5" placeholder="unesite tekst"> </textarea>
+        <br/>
+        <input type="hidden" value="test" name="hidden_field">
+        <input type="submit" value="send">
+    </form>
+</body>
+</html>
