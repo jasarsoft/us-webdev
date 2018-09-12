@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title> Forme </title>
+</head>
+<body>
+    <h1> Prva forma </h1>
+    <form enctype="text/plain" action="mailto:nbacanin@singidunum.ac.rs" name="form1" method="post">
+        <label for="name"> Vase ime: </label>
+        <input type="text" size="12" maxlength="12" id="name" name="name" value="" /> <br/>
+        
+        <label for="surname"> Vase prezime: </label>
+        <input type="text" size="12" maxlength="12" name="surname" id="surname" value="" /> <br/>
+        
+        <label for="password"> Vasa sifra: </label> 
+        <input type="password" id="password" size="8" maxlength="8" name="password" value=""/><br/>
+        
+        <textarea rows="4" cols="30" wrap="">
+            Molim Vas, unesite Vase komentare
+        </textarea> <br/>
+
+        <input type="checkbox" checked="true" name="emaillist"/> Da li zelite da se prijavite na nasu mailing listu  <br/>
+        
+        <label for="age"> Koliko imate godina: </label>
+        <input type="radio" name="age" id="age" value="20-30"/> 20-30 &nbsp 
+        <input type="radio" name="age" value="30-40"/> 30-40 &nbsp
+        <input type="radio" name="age" value="40-50"/> 40-50 &nbsp
+        <br/>
+
+        <label for="color"> Vasa omiljena boja: </label>
+        <select name="color" id="color">
+            <option value="crvena"/> Crvena
+            <option value="plava"/> Plava
+            <option value="zelena"/> Zelena
+        </select>
+        <br/>
+
+        <input type="submit" name="send" value="posalji podatke"/> &nbsp;&nbsp; 
+        <input type="reset" name="reset" value="resetuj sve"/> 
+    </form>
+
+    <h1> DRUGA FORMA </h1>
+    <form enctype="text/plain" action="mailto:me@tailspintoys.com" method="post">
+        <p>
+            What is the nature of your comment?<br>
+            <input type="radio" name="nature" value="suggestion">Suggestion
+            <input type="radio" name="nature" value="problem">Problem
+            <input type="radio" name="nature" value="complaint">Complaint
+        </p>
+        <p>
+            What specifically would you like to comment on?<br>
+            <select name="specific">
+                <option value="website">Web site
+                <option value="company">Company
+                <option value="products">Products
+                <option value="other"> Other
+            </select>
+        </p>
+        <p>
+            Please enter your comments below:<br>
+            <textarea name="comments" rows="6" cols="60" wrap="">
+            </textarea>
+        </p>
+        <p>
+            How can we get in touch with you?<br>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="name" size="40"></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" name="email" size="40"></td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td><input type="text" name="phone" size="20"></td>
+                </tr>
+                <tr>
+                    <td>Fax:</td>
+                    <td><input type="text" name="fax" size="20"></td>
+                </tr>
+            </table>
+        </p>
+        <p>
+            <input type="checkbox" name="asap"/>
+            Please contact me as soon as possible regarding this feedback.
+                
+        </p>
+        <p>
+            <input type="submit" value="Submit Feedback">
+            <input type="reset" value="Start Over">
+        </p>
+    </form>
+</body>
+</html>
