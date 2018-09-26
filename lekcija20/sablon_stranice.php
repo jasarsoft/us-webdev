@@ -31,11 +31,11 @@
             <div id="main">
                 <h1><?php echo htmlspecialchars($this->getNaslov()); ?></h1>
                 
-                <?php if($this->getTipStranice() == 'tekst'): ?>
-                    <div class="text">
+                <div class="text">
                         <?php echo $this->getSadrzaj(); ?>
-                    </div>
-                <?php elseif($this->getTipStranice() == 'proizvodi'): ?>
+                </div>
+                    
+                <?php if($this->getTipStranice() == 'proizvodi'): ?>
                     <div class="products">
                         <?php 
                             if($this->getPosebanSadrzaj() and is_array($this->getPosebanSadrzaj())){
