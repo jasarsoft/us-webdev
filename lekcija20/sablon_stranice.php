@@ -47,13 +47,11 @@
                     </div>
                 <?php elseif($this->getTipStranice() == 'kontakt'): ?>
                     <div class="kontakt">
-                        <?php if($this->getPosebanSadrzaj() and is_object($this->getPosebanSadrzaj())): ?>
-                            Ime i prezime: <?php echo htmlspecialchars($this->getPosebanSadrzaj()->imeIPrezime); ?><br>
-                            Telefon: <?php echo htmlspecialchars($this->getPosebanSadrzaj()->telefon); ?><br>
-                            e-Mail: <a href="mailto:<?php echo htmlspecialchars($this->getPosebanSadrzaj()->email); ?>">
-                                        <?php echo htmlspecialchars($this->getPosebanSadrzaj()->email); ?>
-                                    </a>
-                        <?php endif; ?>
+                        <?php 
+                            if($this->getPosebanSadrzaj() and is_object($this->getPosebanSadrzaj())) {
+                                require 'sablon_kontakt.php';
+                            }
+                        ?>
                     </div>
                 <?php else: ?>
                     <!-- nepoznat tip stranice -->
