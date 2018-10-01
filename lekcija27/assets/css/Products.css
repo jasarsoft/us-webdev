@@ -1,0 +1,28 @@
+ul.spisak-proizvoda {
+    list-style: none;
+    margin: 0px;
+}
+
+ul.spisak-proizvoda > li {
+    margin-bottom: 10px;
+}
+
+ul.spisak-proizvoda > li > h2 {
+    font-size: 14pt;
+    font-weight: normal;
+}
+
+ul.spisak-proizvoda > li > h2 > a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul.spisak-proizvoda > li > h2 > a > span.price {
+    display: inline-block;
+    margin: 0px 5px;
+    font-size: 12pt;
+}
+
+ul.spisak-proizvoda > li > h2 > a:hover > span.price {
+    border-bottom: 1px solid chocolate;
+}

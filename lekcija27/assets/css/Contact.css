@@ -1,0 +1,35 @@
+.input-block{
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.input-block > label {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 150px;
+}
+
+/*.input-block > textarea,
+.input-block > input[type='tel'],
+.input-block > input[type='url'],
+.input-block > input[type='text'],
+.input-block > input[type='date'],
+.input-block > input[type='month'],
+.input-block > input[type='week'],
+.input-block > input[type='email'],
+.input-block > input[type='number'],
+.input-block > input[type='password'],
+.input-block > input[type='datetime'],
+.input-block > input[type='datetime-local']{
+    padding: 5px 10px;
+}*/
+
+.input-block > .input-field {
+    padding: 5px 10px;
+    min-width: 400px;
+}
+
+form .button {
+    padding: 10px 40px;
+    font-weight: bold;
+}
