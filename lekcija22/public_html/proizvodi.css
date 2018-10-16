@@ -1,0 +1,40 @@
+.proizvodi {
+    text-align: center;
+}
+
+.proizvodi > .proizvod {
+    vertical-align: top;
+    border: 1px solid #eeeeee;
+    background-color: #fcfcfc;
+    display: inline-block;
+    margin-bottom: 4px;
+    text-align: left;
+    padding: 15px;
+    width: 215px;
+}
+
+.proizvodi > .proizvod:hover {
+    border: 1px solid #bbb;
+    background-color: #fafafa;
+}
+
+.proizvodi > .proizvod > header > h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.proizvodi > .proizvod > .opis {
+    min-height: 102px;
+    max-height: 102px;
+    overflow: hidden;
+}
+
+.proizvodi > .proizvod > .cijena {
+    border-top: 1px solid #ccc;
+    text-align: right;
+    padding-top: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+}
