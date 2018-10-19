@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Primjer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1> Zahtev za kupovinu </h1>
+        <h2> Valuta: <font color="blue"> Ethereum </font> </h2>
+        
+        <form name="prva" method="POST" action="potvrda.php">
+            <label for="ime"> Vase ime: </label>
+            <input type="text" id="ime" name="ime"> </br> <br/>
+            <label for="prezime"> Vase prezime:</label>
+            <input type="text" name="prezime" id="prezime"> </br> <br/>
+            <label for="godina"> Unesite godinu rodjenja </label> 
+            <input type="number" name="godina" id="godina" min="1918" max="2000"> <br/><br/>
+            <label for="pol"> Izaberite pol: </label>
+            <label for="muski">Muski</label>
+            <input type="radio" name="pol" id="muski" value="muski">
+            <label for="zenski">Zenski</label>
+            <input type="radio" name="pol" id="zenski" value="zenski"><br/> <br/>
+            <label for="placanje"> Izaberite nacin placanja </label>
+            <select id="placanje" name="placanje">
+            <option value="VISA">VISA</option>
+            <option value="MASTER">MASTER</option>
+            </select> <br/> <br/>
+            <label for="kolicina"> Zelim da kupim </label> 
+            <input type="text" size="1" name="kolicina" id="kolicina"> ETH <br/><br/>
+            <input type="submit" name="potvrdi" id="potvrdi" value="POTVRDI">
+        </form>
+    </body>
+</html>
