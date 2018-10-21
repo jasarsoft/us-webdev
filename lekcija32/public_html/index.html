@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CMS Front Demo</title>
+        <meta charset="UTF-8">
+        <link href="assets/css/main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="wrapper">
+            <nav id="modules-menu">
+                <ul>
+                    <li><a href='#'> <img alt='Home' src='assets/img/icons/home.png'></a></li>
+                    <li><a href='#' class='active'> <img alt='Users' src='assets/img/icons/users.png'></a></li>
+                    <li><a href='#'> <img alt='Contracts' src='assets/img/icons/contracts.png'></a></li>
+                    <li><a href='#'> <img alt='Tasks' src='assets/img/icons/tasks.png'></a></li>
+                    <li><a href='#'> <img alt='Help' src='assets/img/icons/help.png'></a></li>
+                </ul>
+            </nav><!--
+
+            --><section id='module-window'>
+                <header>
+                    <h1>Users module</h1><!--
+                --><a href='#'><img alt="Logout" src="assets/img/icons/logout.png"></a>
+                </header>
+
+                <nav id="module-methods-menu">
+                    <ul>
+                    <li><a href="#">List all</a></li><!--
+                    --><li><a href="#" class="active">Add user</a></li><!--
+                    --><li><a href="#">Edit user</a></li><!--
+                    --><li><a href="#">Statistics</a></li>
+                    </ul>
+                </nav>
+
+                <main>
+                    <form method="post">
+                        <div class="input-block">
+                            <label for="f1_forename">Forename:</label>
+                            <input type="text" name="forename" id="f1_forename" required placeholder="Enter user's forename" class="input-field">
+                        </div>
+                        <div class="input-block">
+                            <label for="f1_surname">Surname:</label>
+                            <input type="text" name="surname" id="f1_surname" required placeholder="Enter user's surname" class="input-field">
+                        </div>
+                        <div class="input-block">
+                            <label for="f1_email">E-mail address:</label>
+                            <input type="email" name="email" id="f1_email" required placeholder="Enter user's email address" class="input-field">
+                        </div>
+                        <div class="input-block">
+                            <label for="f1_username">Username:</label>
+                            <input type="text" name="username" id="f1_username" required placeholder="Enter user's username" class="input-field">
+                        </div>
+                        <div class="input-block">
+                            <label for="f1_password">Password:</label>
+                            <input type="password" name="password" id="f1_password" required placeholder="Enter user's password" class="input-field">
+                        </div>
+                        <div class="input-block">
+                            <label for="f1_password_again">Password again:</label>
+                            <input type="password" name="password_again" id="f1_password_again" required placeholder="Enter user's password and more time" class="input-field">
+                        </div>
+                        
+                        <div class="input-block">
+                            <label></label>
+                            <button type="submit">
+                                Add user
+                            </button>
+                        </div>
+                    </form>
+                </main>
+            </section>
+
+            <footer>
+                &copy; 2016 Ta &amp; Ta co.
+            </footer>
+        </div>
+    </body>
+</html>
