@@ -1,0 +1,10 @@
+@media screen and (max-width: 640px) {
+    ul.spisak-proizvoda > li {
+        margin-bottom: 15px;
+    }
+    
+    ul.spisak-proizvoda > li > h2 > a {
+        padding: 10px 15px;
+        display: block;
+    }
+}
