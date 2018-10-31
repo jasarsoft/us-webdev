@@ -15,12 +15,16 @@ function provjeraTabele() {
        var tr = $(this);
        var brojPoena = $(tr).attr('data-broj-poena');
        
+       $(tr).removeClass('pao');
+       $(tr).removeClass('uslovno');
+       $(tr).removeClass('polozio');
+       
        if (brojPoena < 11) {
-           $(tr).css('color', 'red');
+           $(tr).addClass('pao');
        } else if (brojPoena >= 11 && brojPoena < 17) {
-           $(tr).css('color', 'blue');
+           $(tr).addClass('uslovno');
        } else {
-           $(tr).css('color', 'green');
+           $(tr).addClass('polozio');
        }
     });
 }

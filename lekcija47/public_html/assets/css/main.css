@@ -10,3 +10,7 @@ table tbody tr td {
 table tbody tr td:last-child {
     text-align: right;
 }
+
+table tbody tr.pao td { color: red; }
+table tbody tr.uslovno td { color: blue; }
+table tbody tr.polozio td { color: green; }
