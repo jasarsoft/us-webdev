@@ -47,7 +47,12 @@ function showTab() {
 }
 
 function initDugme() {
-    $('.dugme').hover(misPrekoDugmeta, misIzvanDugmeta);
+//    $('.dugme').bind('mouseenter', misPrekoDugmeta);
+//    $('.dugme').bind('mouseleave', misIzvanDugmeta);
+//    
+//    $('.dugme').hover(misPrekoDugmeta, misIzvanDugmeta);
+
+    $('.dugme').bind('dblclick', animirajDugme);
 }
 
 function misPrekoDugmeta() {
@@ -58,8 +63,28 @@ function misPrekoDugmeta() {
 }
 
 function misIzvanDugmeta() {
-    $(this).css('color', 'white');
-    $(this).css('border-width', '10px');
-    $(this).css('background-color', '#000');
+    $(this).css('color', 'white').css('border-width', '10px').css('background-color', '#000');
     $(this).html('Mis je bio nad ovim dugmetom!');
+}
+
+function animirajDugme() {
+    $(this).animate({
+        'border-width' : '50',
+        'background-color' : '#401020',
+        'color' : '#f3f111'
+    }, 1000);
+    
+    $(this).animate({
+        'border-width' : '10',
+        'background-color' : '#330012',
+        'font-size' : 100
+    }, 500);
+    
+    $(this).delay(3000);
+    
+    $(this).animate({
+        'padding-left' : 200,
+        'padding-right' : 200,
+        'color' : '#0000ff'
+    }, 7000);
 }
