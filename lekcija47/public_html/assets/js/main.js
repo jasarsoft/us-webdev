@@ -4,7 +4,7 @@ function prikaziTab(tabId) {
 }
 
 function init(){
-    prikaziTab(1);
+    //prikaziTab(1);
     provjeraTabele();
     initTabs();
 }
@@ -31,6 +31,11 @@ function provjeraTabele() {
 }
 
 function initTabs() {
+    $('.tab').hide();
+    
+    var id = $('.tab-header button:first-child').attr('data-for');
+    $(id).show();
+    
     $('.tab-header button').bind('click', showTab);
 }
 
