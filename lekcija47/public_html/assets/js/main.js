@@ -7,6 +7,7 @@ function init(){
     //prikaziTab(1);
     provjeraTabele();
     initTabs();
+    initDugme();
 }
 
 $(init);
@@ -43,4 +44,22 @@ function showTab() {
     var id = $(this).attr('data-for');
     $('.tab').hide();
     $(id).show();
+}
+
+function initDugme() {
+    $('.dugme').hover(misPrekoDugmeta, misIzvanDugmeta);
+}
+
+function misPrekoDugmeta() {
+    $(this).css('color', 'red');
+    $(this).css('border-width', '50px');
+    $(this).css('background-color', '#444');
+    $(this).html('Mis je presao preko ovog dugmeta!');
+}
+
+function misIzvanDugmeta() {
+    $(this).css('color', 'white');
+    $(this).css('border-width', '10px');
+    $(this).css('background-color', '#000');
+    $(this).html('Mis je bio nad ovim dugmetom!');
 }
