@@ -24,6 +24,7 @@ function init() {
         
         $(el).hover(onOver, onOut);
         
+        $(el).bind('click', clicked);
         
         $('#matrix').append(el);
     }
@@ -31,6 +32,8 @@ function init() {
 
 function onOver() {
     var el = $(this);
+    
+    if ( $(el).attr('data-inactive') === '1') return;
     
     var x = $(el).attr('data-original-x');
     var y = $(el).attr('data-original-y');
@@ -54,6 +57,8 @@ function onOver() {
 function onOut() {
     var el = $(this);
     
+    if ( $(el).attr('data-inactive') === '1') return;
+    
     var x = $(el).attr('data-original-x');
     var y = $(el).attr('data-original-y');
     
@@ -65,4 +70,14 @@ function onOut() {
         'background-color' : '#ddf',
         'border-color': '#999'
     }, 50);
+}
+
+function clicked() {
+    $(this).attr('data-inactive', 1);
+    $(this).animate({
+        'background-color' : '#eeeeee'
+    }, 5000);
+    
+    $(this).delay(4000);
+    $(this).hide(500);
 }
