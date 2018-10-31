@@ -6,6 +6,7 @@ function prikaziTab(tabId) {
 function init(){
     prikaziTab(1);
     provjeraTabele();
+    initTabs();
 }
 
 $(init);
@@ -27,4 +28,14 @@ function provjeraTabele() {
            $(tr).addClass('polozio');
        }
     });
+}
+
+function initTabs() {
+    $('.tab-header button').bind('click', showTab);
+}
+
+function showTab() {
+    var id = $(this).attr('data-for');
+    $('.tab').hide();
+    $(id).show();
 }
