@@ -1,0 +1,7 @@
+{
+    "db_host"   : "localhost",
+    "db_user"   : "root",
+    "db_pass"   : "singidunum",
+    "db_name"   : "proba_baza",
+    "db_type"   : "mysql"
+}
