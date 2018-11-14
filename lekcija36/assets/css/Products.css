@@ -1,0 +1,20 @@
+.input-block{
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.input-block > label {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 150px;
+}
+
+.input-block > .input-field {
+    padding: 5px 10px;
+    min-width: 400px;
+}
+
+form .button {
+    padding: 10px 40px;
+    font-weight: bold;
+}
