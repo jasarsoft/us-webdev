@@ -1,0 +1,30 @@
+.container {
+    min-height: 100vh;
+}
+
+.avatar {
+    margin: 10px auto;
+    display: block;
+    width: 70%;
+}
+
+#main-row {
+    margin-top: 20px;
+}
+
+.chart {
+    background-color: #f5f5f5;
+    display: block;
+    height: 200px;
+    margin: 20px 0px;
+}
+
+#main-panel .panel-body {
+    max-height: calc(100vh - 125px);
+    min-height: calc(100vh - 125px);    
+}
+
+.scroller {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
