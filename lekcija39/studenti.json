@@ -1,0 +1,18 @@
+[
+    {
+        "forename"  : "Milan",
+        "surname"   : "Tair",
+        "email"     : "mtair@singidunum.ac.rs",
+        "email_type" : "work",
+        "index"     : "2008/21354",
+        "avarage"   : 9.45
+    },
+    {
+        "forename"  : "Pera",
+        "surname"   : "Peric",
+        "email"     : "pera.peric.11@singimail.rs",
+        "email_type" : "student",
+        "index"     : "2011/500900",
+        "avarage"   : 9.45
+    }
+]
