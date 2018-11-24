@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studenti>
+    <student>
+        <forename>Milan</forename>
+        <surname>Tair</surname>
+        <email type="work">mtair@singidunum.ac.rs</email>
+        <index>2008/213514</index>
+        <avarage>9.45</avarage>
+    </student>
+    <student>
+        <forename>Pera</forename>
+        <surname>Peric</surname>
+        <email type="student">pera.peric.11@singimail.rs</email>
+        <index>2011/500900</index>
+        <avarage>9.45</avarage>
+    </student>
+</studenti>
