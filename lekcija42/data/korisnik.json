@@ -1,0 +1,24 @@
+{
+    "ime": "Pera",
+    "prezime": "Peric",
+    "adrese": [
+        {
+            "ime_ulice": "Prva ulica",
+            "broj_zgrade": 34,
+            "pak": 16000,
+            "@interfon": "Peric"
+        }
+    ],
+    "telefoni": [
+        {
+            "broj": "+3811113099245",
+            "@tip": "poslovni",
+            "@glavni": 1
+        },
+        {
+            "broj": "+38111092345",
+            "@tip": "kucni",
+            "@glavni": 0
+        }
+    ]
+}
