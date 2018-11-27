@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Calibri', sans-serif;
+    overflow-x: hidden;
+    font-size: 24pt;
+}
+
+.page.page-opaque {
+    color: #fff;
+}
+
+.page-body.red {background-color: rgba(100, 30, 20, 0.8);}
+.page-body.green {background-color: rgba(0, 50, 30, 0.8);}
+.page-body.blue {background-color: rgba(0, 30, 50, 0.8);}
+
+.page {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.page > .page-body {
+    text-align: center;
+    padding: 5vh 10vw;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.page[class*='background-'] .page-body {
+    background-image: url("../img/pattern.png");
+    background-repeat: repeat;
+    color: #fff;
+}
+
+.page.page-opaque .page-body {
+    background-image: none;
+}
+
+.page.background-1 {background-image: url('../img/1.jpg')}
+.page.background-2 {background-image: url('../img/2.jpg')}
+
+h1 {
+    text-align: center;
+    margin: 50px auto;
+    font-weight: bold;
+    font-size: 32pt;
+}
+
+h2 {
+    text-align: center;
+    margin: 40px auto;
+    font-size: 28pt;
+}
+
+.box p  {
+    padding-bottom: 15pt;
+    text-align: justify;
+}
+
+.box {
+    background-color: rgba(10, 10, 10, 0.5);
+    padding: 20px 60px 80px 60px;
+}
+
+.page:not([class*='background-']) .box {
+    background-color: transparent;
+}
+
+nav {
+    background-color: rgba(240, 240, 240, 0.6);
+    position: fixed;
+    width: auto;
+    right: 0px;
+    top: 0px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 22pt;
+    color: #000;
+}
