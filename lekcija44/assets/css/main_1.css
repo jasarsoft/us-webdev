@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul, ol {
+    margin-left: 30px;
+}
+
+body {
+    text-align: center;
+}
+
+#wrapper {
+    max-width: 1000px;
+    min-width: 1000px;
+    margin: 0px auto;
+    display: inline-block;
+    text-align: left;
+}
+
+#nav {
+    margin: 15px 0px;
+}
+
+#nav > ul {
+    list-style: none;
+    margin: 0px;
+}
+
+#nav > ul > li {
+    display: inline-block;
+}
+
+#nav > ul > li > a {
+    color: chocolate;
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 25px;
+    margin-right: 10px;
+    border-bottom: 1px solid chocolate;
+}
+
+#nav > ul > li > a:hover {
+    border-bottom-color: black;
+    color: black;
+}
+
+#nav > ul > li > a.active {
+    border-bottom-color: red;
+    font-weight: bold;
+    color: #000;
+}
+
+article.blok {
+    border: 1px solid #e9e9e9;
+    padding: 10px;
+}
+
+article.blok p {
+    margin-bottom: 10px;
+}
+
+article.blok > header {
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom: 10px;
+}
+
+article.blok > header > h1 {
+    padding-bottom: 10px;
+    font-size: 16pt;
+}
+
+#footer {
+    border-top: 1px solid #555;
+    text-align: center;
+    padding: 15px 0px;
+    margin-top: 15px;
+}
+
+
+.input-block{
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.input-block > label {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 150px;
+}
+
+.input-block > .input-field {
+    padding: 5px 10px;
+    min-width: 400px;
+}
+
+.button {
+    vertical-align: bottom;
+    border: 1px solid #888;
+    background-color: #ddd;
+    display: inline-block;
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table thead th {
+    background-color: #811;
+    font-weight: bold;
+    padding: 3px 5px;
+    color: #fff;
+}
+
+.table tbody th,
+.table tbody td {
+    border-bottom: 1px solid #888;
+    padding: 2px 5px;
+}
+
+.table a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1px 5px;
+    color: #811;
+}
+
+.table a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
