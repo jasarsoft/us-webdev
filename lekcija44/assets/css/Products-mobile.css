@@ -1,0 +1,14 @@
+@media screen and (max-width: 640px) {
+    .input-block > label {
+        display: block;
+    }
+    
+    .input-block > .input-field {
+        padding: 10px 15px;
+        margin-top: 5px;
+    }
+    
+    form .button{
+        padding: 25px 60px;
+    }
+}
