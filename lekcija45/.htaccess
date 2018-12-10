@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    RewriteRule ^assets - [L]
+    RewriteRule ^test - [L]
+
+    RewriteRule ^(.*)$ index.php [L]
+</IfModule>
