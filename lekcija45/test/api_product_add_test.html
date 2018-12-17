@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action='http://localhost:8080/lekcija45/api/product/add' method='post'>
+            Ime: <input type='text' name='name'><br>
+            Opis: <input type='text' name='description'><br>
+            Cijena: <input type='number' min='0.01' step='any' name='price'><br>
+            
+            Kategorije:<br>
+            <input type='checkbox' name='categories[]' value='3'> Audio oprema<br>
+            <input type='checkbox' name='categories[]' value='4'> Aplikativni softver<br>
+            <input type='checkbox' name='categories[]' value='6'> Tastatura<br>
+            <input type='checkbox' name='categories[]' value='1'> PC periferije<br>
+            
+            <button type='submit'>Dodaj</button>
+    </body>
+</html>
