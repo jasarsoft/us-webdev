@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>API Client</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id='categories'>
+            
+        </div>
+        <hr>
+        <div id='products'>
+            
+        </div>
+        <hr>
+        <div id='details'>
+            
+        </div>
+        <hr>
+        
+        Add new product form:<br>
+        <form onsubmit='return addNewProduct();'>
+            Ime: <input type='text' id='f1_name'><br>
+            Opis: <input type='text' id='f1_description'><br>
+            Cijena: <input type='number' min='0.01' step='any' id='f1_price'><br>
+            
+            Kategorije:<br>
+            <div id='f1_categories'></div>
+            
+            <button type='submit'>Dodaj</button>
+            <div id='f1_message'></div>
+        </form>
+        <script src='assets/js/jquery-3.3.1.min.js'></script>
+        <script src='assets/js/main.js'></script>
+    </body>
+</html>
