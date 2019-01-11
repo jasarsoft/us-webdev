@@ -1,0 +1,9 @@
+h1,h2,h3 {
+    color:red;
+    font-family:arial;
+    background-color:blue;
+}
+p {
+    text-align:center;
+    color:yellow;
+}
