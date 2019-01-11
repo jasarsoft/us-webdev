@@ -1,0 +1,13 @@
+body {
+    background-image:url(auto.jpg); 
+    background-repeat:repeat-x;
+    background-color:pink;
+}
+
+div {
+    background-color:green; 
+    text-indent:50px; 
+    letter-spacing:4px;
+    word-spacing:3px;
+    font-size:66;
+}
