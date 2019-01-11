@@ -1,0 +1,66 @@
+<html>
+<head> </head>
+
+<h1> Nasa forma </h1>
+
+
+<form enctype="text/plain" action="otvori.php" name="forma1" method="post">
+
+<label for="name"> Vase ime: </label>
+
+<input type="text" size="12" maxlength="12" id="name" name="name" value="" placeholder="Vase ime" autofocus/> <br/> <br/>
+
+<label for="surname"> Vase prezime: </label>
+
+<input type="text" size="12" maxlength="12" name="surname" id="surname"   value="" placeholder="Vase prezime"/> <br/> <br/>
+
+<label for="password"> Vasa sifra: </label> 
+
+<input type="password" id="password" size="8" maxlength="8" name="password" value=""/><br/> <br/>
+
+
+<textarea rows="4" cols="30" wrap="">
+
+Unesite Vase komentare
+
+</textarea> <br/> <br/>
+
+<input type="checkbox" checked="true" name="emaillist"/> Da li zelite da se prijavite na nasu mailing listu  <br/> <br/>
+
+<label for="age"> Koliko imate godina: </label>
+
+<input type="radio" name="age" id="age" value="20-30"/> 20-30 &nbsp 
+
+<input type="radio" name="age" value="30-40"/> 30-40 &nbsp
+
+<input type="radio" name="age" value="40-50"/> 40-50 &nbsp
+
+<br/> <br/>
+
+<label for="color"> Vasa omiljena boja: </label>
+
+<select name="color" id="color">
+
+<option value="crvena"/> Crvena
+<option value="plava"/> Plava
+<option value="zelena"/> Zelena
+
+</select>
+<br/> <br/>
+
+<label for="date"> Unesite Vase godine: </label> <input type="date" id="date" name="datum" min="2018-01-01"> <br/> <br/>
+
+<label for="range"> Izaberite </label> <input type="range" min="0" max="100" name="rangeTag" id="range"> <br/> <br/>
+
+<label for="broj"> Upisite zeljeni broj </label> <input type="number" min="200" max="300" id="broj"> <br/> 
+
+
+<br/>
+
+<input type="submit" name="send" value="posalji podatke"/> &nbsp;&nbsp; 
+<input type="reset" name="reset" value="resetuj sve"/> 
+
+
+</form>
+
+</html>
