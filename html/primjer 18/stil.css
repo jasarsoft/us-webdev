@@ -1,0 +1,16 @@
+* {margin:0px; padding:0px;}
+#omot {width:1024px; height:1000px; margin:0 auto;}
+#zaglavlje {width:1000px; height:200px; border:1px solid #000;}
+#meni {list-style:none; width:1000px; height:50px; border-bottom:1px solid #000; border-left:1px solid #000; border-right:1px solid #000; text-align: center;}
+#meni li {display: inline-block; margin:10px 20px 0px 20px;}
+#omotSredina {height:600px; width:1000px; border-bottom:1px solid #000; border-left:1px solid #000;
+border-right:1px solid #000;display:flex;}
+#levaKolona {height:600px; width:250px;}
+#desnaKolona {height:600px; width:250px;}
+#sadrzaj{height:600px; width:498px; border-left:1px solid #000; border-right:1px solid #000;}
+footer {width:1000px; high:50px; border-bottom:1px solid #000; border-left:1px solid #000; border-right:1px solid #000;}
+.sredina {width:500px; margin:0 auto; padding:10px;}
+.sredina span {margin:0px 20px;}
+#meni a {text-decoration: none; color: #555;}
+#meni a:hover {text-decoration: underline; color: #888;}
+h2,h3 {text-align:center;}
