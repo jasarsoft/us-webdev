@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Pristup elementima formulara preko ID atributa</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script type="text/javascript">
+			function prijava (){
+				var imePrezime = document.getElementById('tbImePrezime');
+				var brojIndeksa = document.getElementById('tbBrojIndeksa');
+				var budzet = document.getElementById('rbBudzet').checked;
+				var samofinansiranje = document.getElementById('rbSamofinansiranje').checked;
+				var smer = document.getElementById('ddlSmer');
+				var d1 = document.getElementById('chbDomaci1').checked;
+				var d2 = document.getElementById('chbDomaci2').checked;
+				var datoteka = document.getElementById('tbDatoteka');
+				var napomena = document.getElementById('taNapomena');
+				
+				var podaci = [];
+				var greske = [];
+				
+				if (imePrezime.value == "") {
+					greske.push("Unesite ime i prezime!");
+				} else {
+					podaci.push(imePrezime.value);
+				}
+				
+				if (brojIndeksa.value.length != 10) {
+					greske.push("Unesite broj indeksa!");
+				} else {
+					podaci.push(brojIndeksa.value);
+				}
+				
+				var statusIzbor = "";
+				if (budzet) {
+					statusIzbor = document.getElementById('rbBudzet').value;
+				}
+				
+				if (samofinansiranje) {
+					statusIzbor = document.getElementById('rbSamofinansiranje').value;
+				}
+			
+				if (budzet && samofinansirenje) {
+					statusIzbor = document.getElementById('rbBudzet').value + "," + document.getElementById ('rbSamofinansiranje').value;
+				}
+					
+				if (statusIzbor == "") {
+					greske.push ("Izaberite status!");
+				} else {
+					podaci.push(statusIzbor);
+				}
+				
+				if (smer.value == "0") {
+					greske.push ("Izaberite smer!");
+				} else {
+					podaci.push(smer.value);
+				}
+				
+				var domaci = "";
+				if (d1) {
+					domaci = document.getElementById('chbDomaci1').value;
+				}
+
+				if (d2) {
+					domaci = document.getElementById('chbDomaci2').value;
+				}
+
+				if (d1 && d2) {
+					domaci=document.getElementById('chbDomaci1').value + "," + document.getElementById ('chbDomaci2').value;
+				}
+				
+				if(domaci == "") {
+					greske.push("Izaberite barem jedan domaci");
+				} else {
+					podaci.push(domaci);
+				}
+				
+				if (datoteka.value == "") {
+					greske.push("Izaberite datoteku")
+				}
+			
+				if (napomena.value == "") {
+					greske.push("Unesite napomenu!");
+				} else {
+					podaci.push(napomena.value);
+				}
+
+				var divRezultat = document.getElementById ('podaciIzForme');
+
+				var rezultat = "";
+				rezultat = "<ul>";
+
+				if (greske.length != 0){
+					for (var i in greske) {
+					// for(var i = 0; i < greske.length; i++){
+						rezultat +="<li>" + greske[i] + "</li>"
+					}
+				} else {
+					for (i in podaci) {
+					// for(var i = 0; i < podaci.length; i++){
+						rezultat +="<li>" + podaci[i] + "</li>"
+					}
+				}
+
+				rezultat += "</ul>";
+
+				divRezultat.innerHTML = rezultat;
+			}
+		</script>
+
+		<style type="text/css">
+			.naslov{
+				background-color: #FFF;
+				text-transform: uppercase;
+				color: #FFF
+			}
+			
+			.naziv{
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+			
+			.text-box, lista{
+				border: 1px solid #CCC;
+				width: 145px;
+			}
+			
+			.dugme{
+				padding: 2px;
+				border:3px double #000;
+			}
+		</style>
+	</head>
+	<body>
+		<form name="forma">
+			<table style="width:500px; margin:10px auto; border: 1px solid #CCC">
+				<tr>
+					<th colspan="2" class="naslov"> Predaja domacih zadataka </th>
+				</tr>
+				<tr>
+					<td class="naziv"> Ime i prezime: </td>
+					<td>
+						<input type="text" class="text-box" name="tbImePreyime" id="tbImePrezime"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="naziv"> Broj indeksa: </td>
+					<td>
+						<input type="text" class="text-box" name="tbBrojIndeksa" id="tbBrojIndeksa"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="naziv"> Status:</td>
+					<td>
+						<input type="radio" name="rbStatus" id="rbBudzet" value="B" /> Budzet <br/>
+						<input type="radio" name="rbStatus" id="rbSamofinansiranje" value="S" /> Samofinansiranje <br/>
+					</td>
+				</tr>
+				<tr>
+					<td class="naziv"> Smer: </td>
+					<td>
+						<select class="lista" id="ddlSmer" name="ddlSmer">
+							<option value="0"> Izaberi... </option>
+							<option value="SII"> Savremen Informaciono inzenjerstvo </option>
+							<option value="TF"> Tehnicki fakultet </option>
+							<option value="IM"> Inzenjerski menadzment </option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="naziv"> Domaci: </td>
+					<td>
+						<input type="checkbox" name="chbDomaci" id="chbDomaci1" value="D1"/> Domaci I <br/>
+						<input type="checkbox" name="chbDomaci" id="chbDomaci2" value="D2"/> Domaci II <br/>
+					</td>
+				</tr>
+				<tr>
+					<td class="naziv"> Datoteka: </td>
+					<td>
+						<input type="file" name="tbDatoteka" id="tbDatoteka"/>
+					</td>
+				</tr>
+				<tr>
+					<td class="naziv"> Napomena: </td>
+					<td>
+						<textarea rows="10" cols="20" name="taNapomena" id="taNapomena"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="centar">
+						<input type="button" value="Prijavi" class="dugme" onclick="prijava();"/>
+						<input type="reset" value="Ponisti" class="dugme"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+
+		<div id="podaciIzForme"></div>
+	</body>
+</html>
