@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Upotreba doga]aja onMouseover i onMouseOut</title>
+		<meta hhtp-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			var osnovnaslika = new Image();
+			osnovnaslika.src = "./slike/slika2.jpg";
+			var promenaslike = new Image();
+			promenaslike.src = "./slike/slika1.jpg";
+		</script>
+			
+	</head>
+	
+	<body>
+		<a href="#" onMouseOver="document.imeslike.src = promenaslike.src;" onMouseOut="document.imeslike.src = osnovnaslika.src;">
+			<img src="./slike/slika1.jpg" name="imeslike" />
+		</a>
+		
+	</body>
+</html>
