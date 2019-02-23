@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>Regularni izrazi - test()</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+            <script type="text/javascript">
+                function provera_imePrezime(){
+                    var imePrezime = document.getElementById('tblmePrezime');
+                    var ImePrezimeL = document.getElementById('ImePrezime');
+                    var regImePrezime = /^[A-Z][a-z]{2,19}\s[A-Z][a-z]{3,29}$/;
+
+					if (!regImePrezime.test(imePrezime.value)) {
+						ImePrezimeL.style.color="red";
+						ImePrezimeL.innerHTML = "Ime i prezime nisu u dobrom formatu!";
+					} else {
+						ImePrezimeL.style.color="green";
+						ImePrezimeL.innerHTML="OK!";    
+					}
+                }
+
+                function provera_maticniBroj(){
+                    var maticniBroj = document.getElementById('tbMaticniBroj');
+                    var maticniBrojL = document.getElementById('MaticniBroj');
+                    var regMaticniBroj = /^[0-9]{13}$/;
+                    
+                    if (!regMaticniBroj.test(maticniBroj.value)) {
+                        maticniBrojL.style.color="red";
+                        maticniBrojL.innerHTML="Maticni broj nije u dobrom formatu!";
+                    } else {
+                        maticniBrojL.style.color="green";
+                        maticniBrojL.innerHTML="OK!";
+                    }
+                }
+
+                function provera_regBroj (){
+                    var regBroj = document.getElementById('tbRegBroj');
+                    var regBrojL = document.getElementById('RegBroj');
+                    var regRegBroj = /^[A-Z]{2}\-[0-9]{3}\-[A-Z]{2}$/;
+                    
+                    if (!regRegBroj.test(regBroj.value)) {
+                        regBrojL.style.color="red";
+                        regBrojL.innerHTML="Registarski broj nije u dobrom formatu!";
+                    } else {
+                        regBrojL.style.color="green"
+                        regBrojL.innerHTML = "OK!";
+                    }
+                }
+            </script>
+        <style type="text/css">
+            .naslov {background-color: #CCC; text-transform: uppercase; color: #FFF;}
+            .naziv{text-transform: uppercase; font-weight: bold;}
+            .text-box,.lista {border: 1px solid #CCC; width: 145px;}
+        </style>
+    </head>
+    <body>
+        <form name="forma">
+            <table style="width:500px; margin:10px auto; border:1px solid #CCC;">
+            <tr>
+                <th colspan="2" class="naslov">Regularni izrazi</th>
+                </tr>
+            <tr>
+                <td class="naziv">Ime i prezime:</td>
+                <td>
+                <input type="text" class="text-box" id="tblmePrezime" onkeyup="provera_imePrezime();"/>
+                <br><span id="ImePrezime"></span>
+                </td>
+                </tr>
+            <tr>
+                <td class="naziv">Maticni broj:</td>
+                <td><input type="text" class="text-box" id="tbMaticniBroj" onkeyup="provera_maticniBroj();" />
+                <br><span id="MaticniBroj"></span>
+                </td>
+                </tr>
+                <tr>
+                    <td class="naziv">Registarski broj auta:</td>
+                    <td><input type="text" class="text-box" id="tbRegBroj" onkeyup="provera_regBroj();"/>
+                    <br><span id="RegBroj"></span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        
+    </body>
+</html>
+
