@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Delegacija</title>
+		
+		<script type="text/javascript">
+		//<![CDATA[
+			//broj pingvina u najnizem (tj. trenutnom) redu
+			var pingvina = -1;
+			var redova = 0;
+			
+			function dodajPingvina() {
+				//dodajemo nov tr element ako smo vec dodali pet pingvina ili ako smo na samom pocetku i treba nam prvi red
+				//brojac postavljamo na 0 da bi brojali koliko ih ima u novom redu
+				
+				if (pingvina > 4 || pingvina == -1) {
+					redova++;
+					
+					if (redova > 3) {
+						window.alert("Previse pingvina >.<");
+						return;
+					}
+					
+					var novRed = document.createElement('tr');
+					
+					document.getElementById('tabela').appendChild(novRed);
+					pingvina = 0;
+				}
+				
+				//koristimo lastChild da bismo dobili najnizi red
+				var red = document.getElementById('tabela').lastChild;
+				
+				//kreiramo td i img
+				var td = document.createElement('td');
+				var slika = document.createElement('img');
+				
+				//dodajemo td u tr
+				red.appendChild(td);
+				
+				//dodajemo img u td
+				td.appendChild(slika);
+				
+				slika.src = 'pingvin.jpg';
+				slika.style.width = '100px';
+				
+				pingvina++;
+			}
+		//]]>
+		</script>
+	</head>
+	<body >
+		<h1>Delegacija pingvina</h1>
+		<button onclick="dodajPingvina();">Dodaj pingvina</button>
+		<table>
+			<tbody id='tabela'>
+			</tbody>
+		</table>
+	</body>
+</html>
