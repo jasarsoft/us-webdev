@@ -1,0 +1,44 @@
+<html>
+
+<body>
+    
+<form  id="form1">
+    
+Enter name: <input type="text" name="name" value="John">  <br/>
+Enter surname <input type="text" name="surname" value="Doe"> <br/>
+<select name="age"> 
+    
+<option value="21-30"> 21-30</option>
+<option value="31-40"> 31-40</option>
+<option value="41-50"> 41-50</option>
+    
+</select>
+    
+</form>
+    
+<p id="test"></p>
+
+<button type="button" onclick="test()"> Click me </button>    
+
+<script>
+    
+function test(){
+    
+   var x = document.forms["form1"];
+    var text = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        text += x.elements[i].value + "<br>";
+    }
+    
+    document.getElementById("test").innerHTML=text;
+    
+}
+    
+
+</script>
+    
+</body>
+    
+
+</html>
