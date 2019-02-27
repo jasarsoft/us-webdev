@@ -1,0 +1,15 @@
+<html>
+<body>
+
+<h1 onclick="this.innerHTML = 'Heading has changed'">Click on this text!</h1>
+<h1 onclick="changeIt(this)"> This is heading 1 </h1>  
+    
+<script>
+function changeIt(id) {
+    id.innerHTML = "The heading has changed";
+    id.style.color="Blue";
+}
+</script>
+
+</body>
+</html>
