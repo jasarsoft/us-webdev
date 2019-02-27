@@ -1,0 +1,31 @@
+<html>
+
+    
+<body>
+
+<p class="test"> This is JS DOM introduction class! </p>
+<p class="test"> This class is very useful!</p>
+<p class="test"> We will learn a lot about JS HTML DOM!</p>
+
+<p id="test"> </p>
+    
+<script>
+    
+// pronalazi sve tagove sa class="test" i smesta u niz p
+    
+var p=document.getElementsByClassName("test");
+
+// p elementima pristupamo preko index-a niza p
+    
+var text="First paragraph: <b> " + p[0].innerHTML + "</b><br/>";
+text+="Second paragraph: <b> " + p[1].innerHTML + "</b><br/>";
+text+="Third paragraph: <b> " + p[2].innerHTML + "</b><br/>";
+// pronalazimo element sa id=test i postavljamo innerHTML svojstvo
+document.getElementById("test").innerHTML=text;
+    
+</script>
+    
+</body>
+
+    
+</html>
