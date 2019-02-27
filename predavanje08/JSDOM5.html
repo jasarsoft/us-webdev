@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<p>Hello everybody!</p>
+
+<p class="test">We learn DOM today.</p>
+<p class="test">Now we show <b>querySelectorAll</b> method for accessing HTML elements!</p>
+
+<p id="test"></p>
+
+<script>
+var p = document.querySelectorAll("p.test");
+document.getElementById("test").innerHTML = 
+'The first paragraph (index 0) with class="test": ' + p[0].innerHTML + "<br/>" + 'The second paragraph (index 1) with class="test": ' + p[1].innerHTML;
+
+</script>
+
+</body>
+</html>
