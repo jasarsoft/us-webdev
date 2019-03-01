@@ -1,0 +1,19 @@
+<html>
+<body>
+
+// sada dodajemo eventListener za dogadjaj resize browser objekata
+
+<p>Here we add eventListener to the browser object's event resize </p>
+
+<p>When we resize the windows, the event is triggered</p>
+
+<p id="test"></p>
+
+<script>
+window.addEventListener("resize", function(){
+    document.getElementById("test").innerHTML = Math.round(Math.random());
+});
+</script>
+
+</body>
+</html>
