@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+div {
+    background-color: lightblue;
+    border: 1px solid black;
+    padding: 60px;
+}
+</style>
+</head>
+<body>
+
+<p>THe difference between bubbling and capturing event propagation</p>
+
+<div id="div1">
+  <p id="p1">This parapgraph is bubbling</p>
+</div><br>
+
+<div id="div2">
+  <p id="p2">This paragraph is capturing</p>
+</div>
+
+<script>
+document.getElementById("p1").addEventListener("click", function() {
+    alert("You clicked the P element!");
+}, false);
+
+document.getElementById("div1").addEventListener("click", function() {
+    alert("You clicked the DIV element!");
+}, false);
+
+document.getElementById("p2").addEventListener("click", function() {
+    alert("You clicked the P element!");
+}, true);
+
+document.getElementById("div2").addEventListener("click", function() {
+    alert("You clicked the DIV element!");
+}, true);
+</script>
+
+</body>
+</html>
