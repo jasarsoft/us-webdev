@@ -1,0 +1,30 @@
+<html>
+<body>
+
+<p>Here we add three eventListener to the same object button</p>
+
+<button id="btn1">Test it</button>
+
+<script>
+var x = document.getElementById("btn1");
+// dogadjaj (eng. event) je click, a myClick je upravljac dogadjana (eng. event handler)
+x.addEventListener("click", myClick);
+x.addEventListener("click", myClick1);
+x.addEventListener("click", myClick2);
+    
+
+function myClick() {
+    alert ("First click handler");
+}
+
+function myClick1() {
+    alert ("Second click handler!");
+}
+    
+function myClick2() {
+    alert ("Third click handler");
+}
+</script>
+
+</body>
+</html>
