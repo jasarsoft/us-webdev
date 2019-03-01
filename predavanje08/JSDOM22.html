@@ -1,0 +1,54 @@
+<html>
+
+<head>
+
+<style>
+
+    div{
+
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+    background-color: azure;
+        
+    }
+    
+</style>
+    
+    
+</head>
+    
+<body>
+    
+<p> Demonstration of removeAddListener() method</p>
+    
+<div id="div1"> 
+    
+<button type="button" id="btn1"> Remove eventHandler</button>
+    
+    
+</div>   
+
+<p id="test"> </p>
+    
+
+    
+<script>
+    
+document.getElementById("div1").addEventListener("mousemove",myFunction);
+    
+function myFunction(){
+    document.getElementById("test").innerHTML=Math.random();
+}
+    
+document.getElementById("btn1").addEventListener("click",function(){document.getElementById("div1").removeEventListener("mousemove",myFunction)})
+
+    
+</script>
+
+
+    
+</body>
+    
+
+</html>
