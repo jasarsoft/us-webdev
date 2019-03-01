@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    
+<p id="test"> This is just a test paragraph</p>
+<p id="p1"> </p>
+<p id="p2"> </p>
+<p id="p3"> </p>
+<p id="p4"> </p>
+    
+<script> 
+    
+document.getElementById("p1").innerHTML="The name of the node is: " + document.getElementById("test").nodeName;
+document.getElementById("p2").innerHTML="The type of the node is: " + document.getElementById("test").nodeType;
+document.getElementById("p3").innerHTML="The value of thenode is: " + document.getElementById("test").nodeValue;
+document.getElementById("p4").innerHTML="The value of the child node is: " + document.getElementById("test").firstChild.nodeValue;
+    
+</script>
+    
+</body>
+
+
+</html>
