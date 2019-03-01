@@ -1,0 +1,33 @@
+<html>
+<body>
+
+// u ovom primeru prosledjujemo parametre funkcije eventHandler
+    
+<p>Here we pass parameters to the eventHandler function</p>
+
+<p>Click on this button </p>
+
+<button id="btn1">Click it</button>
+
+<p id="test"></p>
+
+<script>
+
+var x=20;
+var y=30;
+
+// parametre ne mozemo direktno da prosledjujemo,vec u okviru eventHandler funkcije
+// pozivamo funkciju kojoj proslejdujemo parametre
+    
+document.getElementById("btn1").addEventListener("click",function(){myFunction(x,y)});
+    
+
+
+function myFunction(a, b) {
+    var result = a * b;
+    document.getElementById("test").innerHTML = result;
+}
+</script>
+
+</body>
+</html>
