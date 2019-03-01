@@ -1,0 +1,19 @@
+<body>
+
+<p>Here we attache event listener when user click on a button</p>
+
+<button id="btn1">Test it</button>
+
+<script>
+// prvi parametar addEventListener metode je dogadjaj, ali ne navodi se onclick kao 
+// sto je slucaj kod atributa html elementa, vec samo click
+// drugi parametar je funkcija koja se poziva
+document.getElementById("btn1").addEventListener("click", function(){
+    alert("We learn JS DOM!");
+});
+    
+
+</script>
+
+</body>
+</html>
