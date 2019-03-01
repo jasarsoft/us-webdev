@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<h1 id="h1">Our Test Page</h1>
+<p id="p1"></p>
+<p id="p2"></p>
+<p id="p3"></p>
+
+<script>
+document.getElementById("p1").innerHTML = document.getElementById("h1").innerHTML;
+document.getElementById("p2").innerHTML=document.getElementById("h1").firstChild.nodeValue;
+document.getElementById("p3").innerHTML=document.getElementById("h1").childNodes[0].nodeValue;
+    
+// ne mozemo da pomocu firstChild.nodeValue, childNodes[0].nodeValue upisujemo vrednosti,
+// jer su childNodes i firstChild.nodeValue read-only, za dodeljivanje koristimo innerHTML
+
+
+
+</script>
+
+</body>
+</html>
