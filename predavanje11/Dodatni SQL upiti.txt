@@ -1,0 +1,13 @@
+DODATNI UPITI - EMPLOYEES DATABASE
+
+-- Prikazuje razliku izmedju dva datuma u godinama
+
+SELECT first_name,last_name, datediff(SYSDATE(),birth_date)/365 AS "Godine" FROM employees;
+
+-- prikazuje najmanju platu koju je neki zaposleni imao
+
+SELECT MIN(salary) FROM salaries WHERE emp_no=10003;
+
+-- podupit
+
+SELECT * FROM salaries WHERE salary>(SELECT AVG(salary) FROM salaries) LIMIT 100;
