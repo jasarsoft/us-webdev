@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    background: rgba(200, 200, 210, 0.2);
+    border: 1px solid rgba(100, 100, 110, 0.2);
+    padding: 15px;
+    margin: 5px;
+
+    text-align: center;
+}
+
+.auto-width-content {
+    display: inline-block;
+    text-align: left;
+}
+
+h1 {
+    border-bottom: 2px solid rgba(100, 100, 120, 0.5);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+.label {
+    display: inline-block;
+    width: 170px;
+}
+
+input[type=url],
+input[type=text],
+input[type=email],
+input[type=number] {
+    width: 250px;
+}
+
+select {
+    width: 250px;
+}
+
+input[type=radio]:nth-child(3) {
+    margin-left: 30px;
+}
+
+button {
+    padding: 2px 25px;
+}
