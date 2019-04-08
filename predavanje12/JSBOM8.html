@@ -1,0 +1,28 @@
+<html>
+
+<body>
+    
+<p id="cookie"> </p>
+<p id="appName"></p>
+<p id="appCodeName"></p>
+
+
+    
+<script>
+    
+// obzirom da radimo na localhost-u, protocol, port i hostname vrednosti bice prazni
+    
+document.getElementById("cookie").innerHTML="Cookie su omoguceni: " + window.navigator.cookieEnabled;
+
+document.getElementById("appName").innerHTML="App name pretrazivaca: " + window.navigator.appName;
+    
+document.getElementById("appCodeName").innerHTML="App Code Name pretrazivaca: " + window.navigator.appCodeName;
+    
+
+    
+</script>
+    
+</body>
+
+
+</html>
