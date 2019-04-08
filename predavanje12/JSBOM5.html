@@ -1,0 +1,31 @@
+<html>
+
+<body>
+    
+<p id="href"> </p>
+<p id="hostname"></p>
+<p id="path"></p>
+<p id="protocol"></p>
+<p id="port"></p>    
+
+    
+<script>
+    
+// obzirom da radimo na localhost-u, protocol, port i hostname vrednosti bice prazni
+    
+document.getElementById("href").innerHTML="Puna putanja do ove strane je " + window.location.href;
+
+document.getElementById("hostname").innerHTML="Hostname ove stranice je: " + window.location.hostname;
+    
+document.getElementById("path").innerHTML="Pathname ove stranice je: " + window.location.pathname;
+    
+document.getElementById("protocol").innerHTML="Protocol ove stranice je: " + window.location.protocol;
+    
+document.getElementById("port").innerHTML="Port ove stranice je: " + window.location.port;
+    
+</script>
+    
+</body>
+
+
+</html>
