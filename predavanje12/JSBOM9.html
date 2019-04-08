@@ -1,0 +1,39 @@
+<html>
+
+<body>
+    
+<p id="product"> </p>
+<p id="appVersion"></p>
+<p id="userAgent"></p>
+<p id="platform"></p>
+<p id="language"></p>
+<p id="online"></p>
+<p id="JavaEnabled"></p>
+
+
+    
+<script>
+    
+
+    
+document.getElementById("product").innerHTML="Proizvod pretrazivaca: " + window.navigator.product;
+
+document.getElementById("appVersion").innerHTML="App Version pretrazivaca: " + window.navigator.appVersion;
+    
+document.getElementById("userAgent").innerHTML="User agent pretrazivaca: " + window.navigator.userAgent;
+    
+document.getElementById("platform").innerHTML="Platforma pretrazivaca: " + window.navigator.platform;
+    
+document.getElementById("language").innerHTML="Jezik pretrazivaca: " + window.navigator.language;
+    
+document.getElementById("online").innerHTML="Da li je pretrazivac online: " + window.navigator.online;
+    
+document.getElementById("JavaEnabled").innerHTML="Da li pretrazivac podrzava Javu: " + window.navigator.javaEnabled();
+
+    
+</script>
+    
+</body>
+
+
+</html>
