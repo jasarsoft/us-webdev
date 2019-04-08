@@ -1,0 +1,18 @@
+<html>
+<body>
+
+<p>Klikni na dugme probaj i nakon tri sekunde izlazi popup.</p>
+<p>Klikni dugme Stop pre nego sto proteknu tri seknude, kako bi sprecili izlazak popup prozora</p>
+
+
+<button onclick="myVar = setTimeout(myFunction, 3000)">Probaj</button>
+
+<button onclick="clearTimeout(myVar)">Stop</button>
+
+<script>
+function myFunction() {
+    alert("Zdravo!");
+}
+</script>
+</body>
+</html>
