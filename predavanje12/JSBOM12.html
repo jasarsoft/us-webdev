@@ -1,0 +1,24 @@
+<html>
+<body>
+
+<h2>JavaScript Prompt</h2>
+
+<button onclick="myFunction()">Testiraj prompt box</button>
+
+<p id="test"></p>
+
+<script>
+function myFunction() {
+    var txt;
+    var person = prompt("Molim Vas, upisite Vase ime:", "John Doe");
+    if (person == null || person == "") {
+        txt = "Korisnik je pritisnuo dugme Cancel";
+    } else {
+        txt = "Zdravo " + person + "! Sta Vi radite danas?";
+    }
+    document.getElementById("test").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>
