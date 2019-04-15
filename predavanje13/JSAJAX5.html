@@ -1,0 +1,50 @@
+<html>
+
+<body>
+    
+<p> <b> Available cars on our mini market</b></p>
+<button type="button" onclick="load()"> Click here to get all car models </button>
+
+
+<p id="demo"></p>
+    
+<script>
+    
+function load(){
+    
+    var xhttp;
+    xhttp=new XMLHttpRequest();
+    xhttp.onreadystatechange=function(){
+        
+        var text,xml,x,i;
+        
+        xml=this.responseXML;
+        
+        text="";
+        y=xml.getElementsByTagName("MAKE");
+        x=xml.getElementsByTagName("MODEL");
+        
+        
+        
+        for(i=0;i<x.length;i++){
+            
+            text+=x[i].childNodes[0].nodeValue + "<br/>";
+            
+        }
+        
+        document.getElementById("demo").innerHTML=text;
+        
+    };
+    
+    xhttp.open("GET","carCatalog.xml",true);
+    xhttp.send();
+    
+    
+}
+    
+</script>
+    
+</body>
+
+
+</html>
