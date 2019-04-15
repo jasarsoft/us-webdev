@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Prvi AJAX primer</h2>
+
+<p id="test">AJAX ce da promeni tekst koji se nalazi u ovom paragrafu</p>
+
+<button type="button" onclick="loadDoc()">Procitaj</button>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("test").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("POST", "JSAJAX4.php", true);
+  // bez naredne linije POST nece da radi!!!!
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("name=pera&surname=peric");
+}
+</script>
+
+</body>
+</html>
