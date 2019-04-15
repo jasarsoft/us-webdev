@@ -1,0 +1,5 @@
+AJAX - Asynchronious Java Script and XML
+BOM - Browser Object Model
+DOM - Document Object Model
+ADO - Active Data Objects
+XML - eXtensible Markup Language
