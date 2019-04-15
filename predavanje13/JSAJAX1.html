@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Prvi AJAX primer</h2>
+
+<p id="test">AJAX ce da promeni tekst koji se nalazi u ovom paragrafu</p>
+
+<button type="button" onclick="loadDoc()">Procitaj</button>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("test").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "recnik.txt", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
