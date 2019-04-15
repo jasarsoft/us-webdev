@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    
+<style>
+    
+    table,th,td{
+        
+        border:1px solid black;
+        border-collapse: collapse;
+    }
+    
+    td,th{
+        padding: 5px;
+        text-align: center;
+    }
+    
+</style>
+    
+</head>
+    
+<body>
+    
+<p> Click on the button to show all available cars with vendors and models </p>
+    
+<button type="button" onclick="load()"> Show cars </button>
+    
+<table id="demo"> </table>
+    
+</body>
+
+    
+<script>
+    
+function load(){
+    
+    var xhttp=new XMLHttpRequest();
+    
+    xhttp.onreadystatechange=function(){
+        
+        if(this.readyState==4 & this.status==200){
+            
+            myFunction(this);
+            
+            
+        }     
+       
+        
+    };
+    
+    xhttp.open("GET","carCatalog.xml",true);
+    xhttp.send();
+    
+    
+}
+    
+    function myFunction(xhttp){
+        
+        var text="";
+        text=" <tr> <th> Make </th> <th> Model </th> </tr>";
+        
+        var xml=xhttp.responseXML;
+        
+        var car=xml.getElementsByTagName("CAR");
+        
+        var i,value;
+        
+        for(i=0;i<car.length;i++){
+            
+            text+="<tr><td>"  +  car[i].getElementsByTagName("MAKE")[0].childNodes[0].nodeValue + "</td><td>" +  car[i].getElementsByTagName("MODEL")[0].childNodes[0].nodeValue + "</td></tr>";
+        }
+        
+        document.getElementById("demo").innerHTML=text;
+        
+        
+    }
+    
+
+</script>    
+    
+    
+</html>
